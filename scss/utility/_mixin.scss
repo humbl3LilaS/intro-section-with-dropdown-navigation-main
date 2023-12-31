@@ -1,0 +1,36 @@
+@mixin flex-middle() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-justify($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin hamburger() {
+  width: 50px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  display: block;
+  background-image: url("../../images/icon-menu.svg");
+  background-repeat: no-repeat;
+
+  &[aria-expended="true"] {
+    background-image: url("../../images/icon-close-menu.svg");
+  }
+}
+
+@mixin mobile-nav-transition($width: 100%) {
+  transition: transform 0.3s ease-in;
+  transform: translateX($width);
+
+  &[data-visible="true"] {
+    transform: translateX(0);
+  }
+}

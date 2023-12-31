@@ -1,0 +1,21 @@
+@use "../abstract";
+@use "../utility/mixin";
+
+
+.nav {
+  padding: abstract.$pd-mobile;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo-container {
+    @include mixin.flex-middle;
+
+    .logo-img {
+      width: 100%;
+      max-width: 220px;
+    }
+
+  }
+
+}

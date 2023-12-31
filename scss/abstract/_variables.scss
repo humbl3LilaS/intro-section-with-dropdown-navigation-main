@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+// Theme related
+$c-almost_white: hsl(0, 0%, 98%);
+$c-medium_gray: hsl(0, 0%, 41%);
+$c-almost_black: hsl(0, 0%, 8%);
+
+
+// Typography related
+
+//font-family
+$ff-main: 'Epilogue', sans-serif;
+
+// font-size
+$fz-para: 18px;
+
+// font-weight
+$fw-normal: 500;
+$fw-bold: 700;
+
+// Spacing
+$pd-mobile: 20px;
+$vt-spacing_mobile: 20px;

@@ -1,0 +1,52 @@
+@use "../abstract";
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  row-gap: 40px;
+
+  .hero-content {
+    padding: abstract.$pd-mobile;
+
+    text-align: center;
+  }
+
+  .heading-primary {
+    margin-bottom: abstract.$vt-spacing_mobile;
+
+    font-size: 2rem;
+    font-weight: abstract.$fw-bold;
+  }
+
+  .hero-text {
+    margin-bottom: abstract.$vt-spacing_mobile;
+
+    color: abstract.$c-medium_gray;
+    font-weight: abstract.$fw-normal;
+    font-size: 17px;
+  }
+
+  .btn-hero {
+    padding: 10px 20px;
+
+    border-radius: 15px;
+
+    background-color: abstract.$c-almost_black;
+    color: white;
+    font-weight: abstract.$fw-bold;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid transparent;
+  }
+
+  .btn-hero:hover {
+    background-color: abstract.$c-almost_white;
+    color: abstract.$c-almost_black;
+    border: 2px solid abstract.$c-medium_gray;
+  }
+
+
+
+  #desktop {
+    display: none;
+  }
+}

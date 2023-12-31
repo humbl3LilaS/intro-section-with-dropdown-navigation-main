@@ -1,0 +1,75 @@
+@use "../abstract" as *;
+/************** Start of CSS Reset **************/
+
+// box sizing model changes
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// remove default margin
+* {
+  margin: 0;
+}
+
+// Typography related
+body {
+  line-height: 1.5; // for accessible line-height
+  -webkit-font-smoothing: antialiased; // improve text rendering
+  overflow-x: hidden;
+}
+
+// Improve media default
+
+img, button, textarea, select {
+  font: inherit;
+}
+
+
+// Avoid overflow
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// Create a root stacking context
+#root, #__next {
+  isolation: isolate;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  font-size: inherit;
+  font-weight: $fw-bold;
+  color: $c-medium_gray;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+a:hover{
+  color: $c-almost_black;
+}
+
+/************** End of CSS Reset **************/
+
+
+/************** Start of Base style of document **************/
+body {
+  height: 100vh;
+
+  background-color: $c-almost_white;
+
+  font-family: $ff-main;
+  font-size: $fz-para;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+}

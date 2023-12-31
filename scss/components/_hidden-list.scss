@@ -1,0 +1,228 @@
+@use "../abstract";
+@use "../utility";
+
+.hidden-list img, .dropdown-img {
+  width: abstract.$fz-para;
+}
+
+
+.nav-bar {
+  position: relative;
+}
+
+.nav-elements-container {
+  position: relative;
+}
+
+.nav-elements-list {
+  padding: 0;
+  display: flex;
+  column-gap: 2rem;
+
+  & > li:not(:last-of-type) {
+    @include utility.flex-middle
+  }
+
+  .dropdown-img {
+    margin-left: 0.5rem;
+  }
+
+  .hidden-list-container {
+    & > div {
+      min-width: 110px;
+    }
+  }
+
+
+  .hidden-list {
+    display: none;
+    padding: 1rem;
+    margin: 0;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    img {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .icon-list {
+    li {
+      @include utility.flex-justify(start);
+      column-gap: 0.5rem;
+    }
+
+  }
+
+
+  .reg-btn-container {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+
+    #reg-btn {
+      padding-block: 0.5rem;
+      border: 2px solid abstract.$c-medium_gray;
+      border-radius: 0.6rem;
+    }
+  }
+
+
+}
+
+.hidden-list[data-visible="true"] {
+  display: flex;
+}
+
+
+@media screen and (max-width: 450px) {
+  .nav-elements-list {
+    padding: 5rem 3rem;
+    margin: 0;
+
+
+    position: fixed;
+    inset: 0 0 0 30%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    background-color: abstract.$c-almost_white;
+
+    @include utility.mobile-nav-transition;
+
+  }
+
+  .hamburger-btn {
+    @include utility.hamburger
+  }
+
+  #login-btn {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 451px) and (max-width: 1099px) {
+  .nav-elements-list {
+    width: 50%;
+    height: 100vh;
+    padding: 7rem 3rem;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 450px;
+    background-color: abstract.$c-almost_white;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    & > li:not(:last-of-type) {
+      justify-content: start;
+    }
+
+    @include utility.mobile-nav-transition;
+
+    #login-btn {
+      margin-bottom: 2rem;
+    }
+
+
+  }
+  .hamburger-btn {
+    @include utility.hamburger;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .nav-bar {
+    width: 85%;
+    display: flex;
+  }
+
+  .nav-elements-container {
+    width: 100%;
+  }
+
+
+  .nav-elements-list {
+    width: 100%;
+    column-gap: 0;
+    justify-content: start;
+
+    & > li:not(:last-of-type, :nth-of-type(4)) {
+      margin-right: 3rem;
+
+    }
+
+    .hidden-list-container {
+      position: relative;
+    }
+
+    .hidden-list {
+      position: absolute;
+      background-color: abstract.$c-almost_white;
+      border-radius: 5px;
+      box-shadow: 1px 1px 6px 0px rgba(61, 53, 53, 0.75);
+      -webkit-box-shadow: 1px 1px 6px 0px rgba(61, 53, 53, 0.75);
+      -moz-box-shadow: 1px 1px 6px 0px rgba(61, 53, 53, 0.75);
+      bottom: -170px;
+    }
+
+    #hidden-icon-list {
+      right: 0;
+      height: 160px;
+    }
+
+    #hidden-plain-list {
+      min-width: 140px;
+      height: 160px;
+    }
+
+
+    .reg-btn-container {
+      width: fit-content;
+      margin-left: auto;
+
+      display: flex;
+
+      button {
+        max-width: 180px;
+      }
+
+      #login-btn {
+        margin-right: 3rem;
+        color: abstract.$c-medium_gray;
+        transition: color 0.3s ease-in-out;
+        font-weight: abstract.$fw-bold;
+      }
+
+      #login-btn:hover{
+        color: abstract.$c-almost_black;
+      }
+
+      #reg-btn {
+        padding: 0.8rem 4rem;
+        text-align: center;
+        max-width: fit-content;
+        color: abstract.$c-medium_gray;
+        font-weight: abstract.$fw-bold;
+        //border: 2px solid transparent;
+
+        transition: all 0.3s ease-in-out;
+      }
+
+      #reg-btn:hover {
+        border: 2px solid abstract.$c-almost_black;
+        color: abstract.$c-almost_black;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+
+
+<header class="nav">
+	<div class="logo-container">
+		<img src="./images/logo.svg" alt="Logo of the site" class="logo-img">
+	</div>
+	<nav class="nav-bar">
+		<div class="nav-elements-container">
+			<ul class="nav-elements-list" id="primary-navigation" data-visible="false">
+				<li>
+					<div class="hidden-list-container">
+						<div>
+							<a href="#">Features</a><img src="./images/icon-arrow-down.svg" alt="Dropdown list opener"
+							                          class="dropdown-img" aria-roledescription="button" role="button" aria-controls="hidden-icon-list">
+						</div>
+						<ul class="hidden-list icon-list" id="hidden-icon-list" data-visible="false">
+							<li>
+								<img src="./images/icon-todo.svg" alt="List icon for Todo list"> <span><a href="#">Todo List</a></span>
+							</li>
+							<li>
+								<img src="./images/icon-calendar.svg" alt="List icon forCalendar" a> <span><a href="#">Calendar</a></span>
+							</li>
+							<li>
+								<img src="./images/icon-reminders.svg" alt="List icon forReminder">
+								<span><a href="#">Reminders</a></span>
+							</li>
+							<li>
+								<img src="./images/icon-planning.svg" alt="List icon forPlanning">
+								<span><a href="#">Planning</a></span>
+							</li>
+						</ul>
+					</div>
+
+				</li>
+				<li>
+					<div class="hidden-list-container">
+						<div>
+							<a href="#">Company</a><img src="./images/icon-arrow-down.svg" alt="Dropdown list opener"
+							                         class="dropdown-img" aria-roledescription="button" role="button" aria-controls="hidden-plain-list">
+						</div>
+
+						<ul class="hidden-list" id="hidden-plain-list" data-visible="false">
+							<li><a href="#">History</a></li>
+							<li><a href="#">Our Team</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#">Careers</a></li>
+				<li><a href="#">About</a></li>
+
+				<li class="reg-btn-container">
+					<button id="login-btn" type="button">Login</button>
+					<button id="reg-btn" type="button">Register</button>
+				</li>
+			</ul>
+
+
+		</div>
+		<button class="hamburger-btn" aria-controls="primary-navigation" aria-expanded="false">
+		</button>
+	</nav>
+
+</header>
+
+<main>
+	<section class="hero">
+		<div class="hero-content">
+			<h1 class="heading-primary">Make remote work</h1>
+
+			<p class="hero-text">
+				Get your team in sync, no matter your location. Streamline processes,
+				create team rituals, and watch productivity soar.
+			</p>
+
+			<button class="btn-hero" type="button">
+				Learn more
+			</button>
+
+			<div class="client-container">
+				<img src="./images/client-databiz.svg" alt="logo image of our client databiz">
+				<img src="./images/client-audiophile.svg" alt="logo image of our client audiophile">
+				<img src="./images/client-meet.svg" alt="logo image of our client meet">
+				<img src="./images/client-maker.svg" alt="logo image of our client maker">
+
+			</div>
+		</div>
+
+		<div class="img-container">
+			<img src="./images/image-hero-desktop.png" alt="" id="desktop">
+			<img src="./images/image-hero-mobile.png" alt="" id="mobile">
+		</div>
+
+	</section>
+
+
+</main>
+
+<script src="js/function.js"></script>
+</body>
+</html>

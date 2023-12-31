@@ -1,0 +1,16 @@
+@use "../abstract";
+@use "../utility";
+
+.client-container {
+  margin-block: 2.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  & > img {
+    width: 20%;
+    max-width: 150px;
+  }
+}
